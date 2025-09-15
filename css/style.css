@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #ead9fa;
+}
+
 .center {
     display: flex;
     max-width: 1700px;
@@ -50,8 +54,8 @@ header h2 {
 }
 
 .banner-ads {
-    width: 60%;
-    height: 170px;
+    width: 70%;
+    height: 220px;
     background-color: #222;
     position: relative;
     background-size: cover;
