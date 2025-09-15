@@ -18,7 +18,7 @@ body {
 
 .about-header {
     width: 100%;
-    background-color: blueviolet;
+    background-color: #8a2be2;
 }
 
 .about-header p {
@@ -36,14 +36,12 @@ header h2 {
     color: #222;
 }
 
-.logo {
+/* .logo {
     margin-top: 10px;
-}
+} */
 
 .logo img{
-    width: 200px;
-    border-radius: 100px;
-    
+    width: 220px;    
 }
 
 .wraper-header {
