@@ -1,0 +1,83 @@
+/* CSS Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #ead9fa;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header */
+  .about-header p {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .menu-main {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .menu-main a {
+    text-decoration: none;
+    color: #8a2be2;
+    font-weight: bold;
+  }
+  
+  .menu-main a:hover {
+    text-decoration: underline;
+  }
+  
+  .tema-btn {
+    cursor: pointer;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8a2be2;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  /* Container da descrição */
+  .sobre-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .sobre-container h1 {
+    margin-bottom: 20px;
+    color: #8a2be2;
+  }
+  
+  .sobre-container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    margin: 30px 0;
+    color: #333;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 600px) {
+    .sobre-container {
+      width: 90%;
+      padding: 15px;
+    }
+  }
+  
