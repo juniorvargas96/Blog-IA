@@ -40,6 +40,7 @@
   body {
     background-color: var(--bg-color);
     color: var(--text-color);
+    
   }
   
   .center {
@@ -98,6 +99,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-radius: 4px;
   }
   .menu-main .links {
     display: flex;
@@ -182,6 +184,10 @@
     padding: 10px;
     color: var(--text-color);
     background-color: var(--highlight-color);
+    position: absolute;
+    bottom: 0;          /* cola no rodapé */
+    left: 0;
+    width: 100%;
   }
   
   .outras-noticias-1 {
