@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #f8f0ff, #ead9fa);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.9;
+    padding: 20px 0;
+}
+
+header {
+    background: #6a1b9a;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1.2px;
+}
+
+.menu-main {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.menu-main a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 12px 20px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.menu-main a:hover {
+    background-color: #7b1fa2;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    transform: translateY(-3px);
+}
+
+.sobre-container {
+    max-width: 850px;
+    margin: 70px auto;
+    padding: 60px 40px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sobre-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
+
+.sobre-container h1 {
+    margin-bottom: 35px;
+    color: #6a1b9a;
+    font-size: 2.5rem;
+    letter-spacing: 1.2px;
+}
+
+.sobre-container p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: auto;
+    padding: 35px 20px;
+    background-color: #f3e8ff;
+    color: #6a1b9a;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .sobre-container {
+        width: 90%;
+        padding: 50px 25px;
+    }
+
+    .menu-main {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .sobre-container h1 {
+        font-size: 2rem;
+    }
+
+    .sobre-container p {
+        font-size: 1.1rem;
+    }
+}
