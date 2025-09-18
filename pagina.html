@@ -8,14 +8,30 @@
 </head>
 <body>
 
-  <!-- Cabeçalho estilo G1 -->
-  <header class="top-bar">
 
-      <div class="menu-icon">☰</div>
-      <div class="logo">Jovem Programador News</div>
-      <div class="category-title">CARREIRAS IMPACTADAS PELA IA</div>
-      <div class="search-icon">🔍</div>
-  </header>
+  <header>   
+    <div class="center">
+        <div class="menu-main">
+            <div class="hamburguer" id="hamburguer">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div class="links" id="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Noticias</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="contato.html">Contato</a>        
+                <div class="switch" id="switch" onclick="toggleMode()">
+                    <button></button>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- FIM HEADER -->
 
   <!-- Conteúdo da notícia -->
   <main class="news-container">
@@ -38,4 +54,6 @@
   </main>
 
 </body>
+<script src="js/script.js"></script>
+
 </html>
