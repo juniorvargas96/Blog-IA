@@ -1,47 +1,110 @@
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: #fdfdfd;
-  color: #222;
-  line-height: 1.6;
-  
-}
-
-/* Barra superior estilo G1 */
-.top-bar {
-  background: #6a1b9a; /* Roxo JPnews */
-  color: white;
-  padding: 12px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #f8f0ff, #ead9fa);
+  color: #333;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-block: 20px;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.9;
+  padding: 20px 0;
+}
+:root {
+  --bg-color: #ead9fa;
+  --text-color: #ffffff;
+  --menu-color: #8a2be2;
+  --banner-color: #ddd;
+  --highlight-color: rgba(255, 255, 255, 0.5);
+  --card-bg: #222;
+  --card-border: #ead9fa;
+  --switch-bg-url: url("../assert/sun-light.svg");
 }
 
-.top-bar .menu-icon,
-.top-bar .search-icon {
-  font-size: 20px;
-  cursor: pointer;
+/* Tema Dark */
+.dark {
+  --bg-color: #310042;
+  --text-color: #ffffff;
+  --menu-color: #6b21b1;
+  --banner-color: #222;
+  --highlight-color: rgba(255, 255, 255, 0.5);
+  --card-bg: #222;
+  --card-border: #490166;
+  --switch-bg-url: url("../assert/moon-stars-dark.svg");
 }
 
-.top-bar .logo {
-  font-size: 22px;
-  font-weight: bold;
+
+.center p {
+font-size: 1.8rem;
+text-align: center;
+margin: 40px 0 30px;
+color: #6a1b9a;
+letter-spacing: 1px;
 }
 
-.top-bar .category-title {
-  flex-grow: 1;
+.center {
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 0 2%;
+  flex-wrap: wrap;
   text-align: center;
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: 1px;
+}
+
+.menu-main {
+  width: 100%;
+  background: linear-gradient(#d5a8ff, var(--menu-color)) ;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+}
+.menu-main .links {
+  display: flex;
+  gap: 40px; /* espaço entre os links */
+}
+
+.menu-main .links a {
+position: relative;
+padding: 8px 16px;
+color: var(--text-color);
+font-weight: bold;
+text-decoration: none;
+z-index: 1;
+}
+
+.menu-main .links a::before {
+content: "";
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%) scaleX(0);
+width: 100%;
+height: 100%;
+background: linear-gradient(#9c38fa, var(--menu-color)) ; /* cor da pílula */
+border-radius: 20px;
+z-index: -1; /* fica atrás do texto */
+transition: transform 0.3s ease;
+}
+
+.menu-main .links a:hover::before {
+transform: translate(-50%, -50%) scaleX(1);
+}
+
+.menu-main a {
+  display: inline-block;
+  margin: 0 130px;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.menu-main a:hover {
+  text-decoration: underline;
 }
 
 /* Conteúdo da notícia */

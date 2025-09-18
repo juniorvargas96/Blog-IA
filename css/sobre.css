@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
@@ -14,26 +15,44 @@ body {
     line-height: 1.9;
     padding: 20px 0;
 }
+:root {
+    --bg-color: #ead9fa;
+    --text-color: #ffffff;
+    --menu-color: #8a2be2;
+    --banner-color: #ddd;
+    --highlight-color: rgba(255, 255, 255, 0.5);
+    --card-bg: #222;
+    --card-border: #ead9fa;
+    --switch-bg-url: url("../assert/sun-light.svg");
+  }
+  
+  /* Tema Dark */
+  .dark {
+    --bg-color: #310042;
+    --text-color: #ffffff;
+    --menu-color: #6b21b1;
+    --banner-color: #222;
+    --highlight-color: rgba(255, 255, 255, 0.5);
+    --card-bg: #222;
+    --card-border: #490166;
+    --switch-bg-url: url("../assert/moon-stars-dark.svg");
+  }
 
-header {
-    background: #6a1b9a;
-    color: #fff;
-    padding: 50px 20px;
-    text-align: center;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-}
 
-header h1 {
-    font-size: 2.5rem;
-    letter-spacing: 1.2px;
+.center p {
+font-size: 1.8rem;
+text-align: center;
+margin: 40px 0 30px;
+color: #6a1b9a;
+letter-spacing: 1px;
 }
 
 .center {
-    display: flex;
     max-width: 1700px;
     margin: 0 auto;
     padding: 0 2%;
     flex-wrap: wrap;
+    text-align: center;
   }
   
   .menu-main {
