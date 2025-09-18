@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home - JPnews</title>
+    <link rel="icon" href="assert/logo-jp.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -14,25 +15,35 @@
                     <img src="assert/logo-jp.png" alt="">
                 </div>
                 <div id="banner" class="banner-ads">
-                    <h2><span>JPnews</span><br/>Insira um anúncio aqui</h2>
+                    <h2><span>JPnews</span></h2>
                 </div>
             </div>
         </div>
     </header>
     <!-- FIM HEADER -->
-     <div class="center">
+     
+    <div class="center">
         <div class="menu-main">
-            <a href="#">Home</a>
-            <a href="#">Noticias</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="contato.html">Contato</a>        
-            <div class="switch" id="switch" onclick="toggleMode()">
-                <button></button>
+            <div class="hamburguer" id="hamburguer">
+                <span></span>
+                <span></span>
                 <span></span>
             </div>
-        </div>
-     </div>
 
+            <div class="links" id="nav-links">
+                    <a href="#">Home</a>
+                    <a href="#">Noticias</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="contato.html">Contato</a>        
+                <div class="switch" id="switch" onclick="toggleMode()">
+                    <button></button>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
      <section class="noticias-1">
         <div class="center">
             <div class="noticias-wraper-1">
@@ -43,24 +54,39 @@
                     </div>
                 </a>   
                 </div>
+
                 <div class="outras-noticias-1">
-                    <div style="background-image: url(assert/senac.jpeg);" class="outra-noticia-1-single">
-                        <h3>Uma noticia</h3>
-                    </div>
-                    <div style="background-image: url(assert/acate.jpg);" class="outra-noticia-1-single">
-                        <h3>Uma noticia</h3>
-                    </div>
-                    <div class="outra-noticia-1-single">
-                        <h3>Uma noticia</h3>
-                    </div>
-                    <div class="outra-noticia-1-single">
-                        <h3>Uma noticia</h3>
-                    </div>
+                   
+                    <a style="background-image: url(assert/senac.jpeg);" class="outra-noticia-1-single" href="https://www.sc.senac.br/ensinomedio/">
+                        <div>
+                            <h3>O Técnico Senac que você confia integrado ao Ensino Médio pra você se jogar no agora</h3>
+                        </div>
+                    </a>    
+
+                    <a class="outra-noticia-1-single"  style="background-image: url(assert/acate.jpg);" href="https://jovemprogramador.com.br/n.php?ID=140&T=jovem-programador-participa-de-encontro-na-acate-e-fortalece-conex-o-com-o-ecossistema-de-inova-o-de-sc">
+                        <div>
+                            <h3>Jovem Programador participa de encontro na <br/>ACATE</h3>
+                        </div>
+                    </a>
+
+                    <a class="outra-noticia-1-single" style="background-image: url(assert/arena-play.jpg);" href="https://portal.sc.senac.br/institucional/noticia/senac-reune-mais-de-600-pessoas-no-arena-play-em-palhoca-a-fim-de-conectar-entusiastas-do-mundo-geek">
+                        <div>
+                            <h3>Senac reúne mais de 600 pessoas no Arena Play em Palhoça</h3>
+                        </div>
+                    </a>
+
+                    <a class="outra-noticia-1-single" style="background-image: url(assert/startup-summit.jpg);" href="https://jovemprogramador.com.br/n.php?ID=141&T=jovem-programador-marca-presen-a-no-startup-summit-2025-e-refor-a-sua-conex-o-com-o-ecossistema-de-inova-o-de-sc">
+                        <div>
+                            <h3>Jovem Programador marca presença no Startup Summit 2025</h3>
+                        </div>
+                    </a>
 
                 </div>
             </div>
         </div>
      </section>
+    </main>
+    </div>
 </body>
 <script src="js/script.js"></script>
 </html>
