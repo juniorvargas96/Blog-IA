@@ -2,110 +2,112 @@
    Reset
 ============================== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
-  
-  /* ==============================
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* ==============================
      Variáveis (Light padrão)
   ============================== */
-  :root {
-    --bg-color: #ead9fa;
-    --text-color: #ffffff;
-    --menu-color: #8a2be2;
-    --banner-color: #ddd;
-    --highlight-color: rgba(255, 255, 255, 0.5);
-    --card-bg: #222;
-    --card-border: #ead9fa;
-    --switch-bg-url: url("../assert/sun-light.svg");
-  }
-  
-  /* Tema Dark */
-  .dark {
-    --bg-color: #310042;
-    --text-color: #ffffff;
-    --menu-color: #6b21b1;
-    --banner-color: #222;
-    --highlight-color: rgba(255, 255, 255, 0.5);
-    --card-bg: #222;
-    --card-border: #490166;
-    --switch-bg-url: url("../assert/moon-stars-dark.svg");
-  }
-  
-  /* ==============================
+:root {
+  --bg-color: #ead9fa;
+  --text-color: #ffffff;
+  --menu-color: #8a2be2;
+  --banner-color: #ddd;
+  --highlight-color: rgba(255, 255, 255, 0.5);
+  --card-bg: #222;
+  --card-border: #ead9fa;
+  --switch-bg-url: url("../assert/sun-light.svg");
+}
+
+/* Tema Dark */
+.dark {
+  --bg-color: #310042;
+  --text-color: #ffffff;
+  --menu-color: #6b21b1;
+  --banner-color: #222;
+  --highlight-color: rgba(255, 255, 255, 0.5);
+  --card-bg: #222;
+  --card-border: #490166;
+  --switch-bg-url: url("../assert/moon-stars-dark.svg");
+}
+
+/* ==============================
      Estrutura global
   ============================== */
-  body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    
-  }
-  
-  .center {
-    display: flex;
-    max-width: 1700px;
-    margin: 0 auto;
-    padding: 0 2%;
-    flex-wrap: wrap;
-  }
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
 
-  
-  header h2 span {
-    color: blueviolet;
-  }
-  
-  header h2 {
-    font-size: 32px;
-    color: var(--text-color);
-  }
-  
-  .logo img {
-    width: 220px;
-    margin-left: 40%;
-  }
-  
-  .wraper-header {
-    padding: 40px 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .banner-ads {
-    width: 70%;
-    height: 220px;
-    background-color: var(--banner-color);
-    position: relative;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  
-  .banner-ads h2 {
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    color: var(--text-color);
-    font-size: 15px;
-    font-style: italic;
-  }
-  
-  .menu-main {
-    width: 100%;
-    background: linear-gradient(#d5a8ff, var(--menu-color)) ;
-    padding: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 4px;
-  }
-  .menu-main .links {
-    display: flex;
-    gap: 40px; /* espaço entre os links */
 }
-  
+
+.center {
+  display: flex;
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 0 2%;
+  flex-wrap: wrap;
+}
+
+
+header h2 span {
+  color: blueviolet;
+}
+
+header h2 {
+  font-size: 32px;
+  color: var(--text-color);
+}
+
+.logo img {
+  width: 220px;
+  margin-left: 40%;
+}
+
+.wraper-header {
+  padding: 40px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.banner-ads {
+  width: 70%;
+  height: 220px;
+  background-color: var(--banner-color);
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.banner-ads h2 {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  color: var(--text-color);
+  font-size: 15px;
+  font-style: italic;
+}
+
+.menu-main {
+  width: 100%;
+  background: linear-gradient(#d5a8ff, var(--menu-color));
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+}
+
+.menu-main .links {
+  display: flex;
+  gap: 40px;
+  /* espaço entre os links */
+}
+
 .menu-main .links a {
   position: relative;
   padding: 8px 16px;
@@ -123,9 +125,11 @@
   transform: translate(-50%, -50%) scaleX(0);
   width: 100%;
   height: 100%;
-  background: linear-gradient(#9c38fa, var(--menu-color)) ; /* cor da pílula */
+  background: linear-gradient(#9c38fa, var(--menu-color));
+  /* cor da pílula */
   border-radius: 20px;
-  z-index: -1; /* fica atrás do texto */
+  z-index: -1;
+  /* fica atrás do texto */
   transition: transform 0.3s ease;
 }
 
@@ -133,135 +137,167 @@
   transform: translate(-50%, -50%) scaleX(1);
 }
 
-  .switch {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+.menu-main a {
+  display: inline-block;
+  margin: 0 130px;
+  color: var(--text-color);
+  text-decoration: none;
 }
 
-  .menu-main a {
-    display: inline-block;
-    margin: 0 130px;
-    color: var(--text-color);
-    text-decoration: none;
-  }
-  
-  .menu-main a:hover {
-    text-decoration: underline;
-  }
-  
-  /* ==============================
+.menu-main a:hover {
+  text-decoration: underline;
+}
+
+/* Botão hamburguer (desktop não mostra) */
+.hamburguer {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburguer span {
+  width: 28px;
+  height: 3px;
+  background: var(--text-color);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+/* ==============================
      Notícias
   ============================== */
-  .noticias-1 {
-    margin-top: 30px;
-  }
-  
-  .noticias-wraper-1 {
-    display: flex;
-    width: 100%;
-  }
-  
-  .noticia-destaque {
-    width: 60%;
-    padding-top: 20%;
-    background-color: var(--card-bg);
-    border: 2px solid var(--card-border);
-    position: relative;
-  }
-  
-  .noticia-destaque-single {
-    left: 0;
-    top: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .noticia-destaque-single h3 {
-    padding: 10px;
-    color: var(--text-color);
-    background-color: var(--highlight-color);
-    position: absolute;
-    bottom: 0;          /* cola no rodapé */
-    left: 0;
-    width: 100%;
-  }
-  
-  .outras-noticias-1 {
-    display: flex;
-    width: 40%;
-    flex-wrap: wrap;
-  }
-  
-  .outra-noticia-1-single {
-    width: 50%;
-    padding-top: 30%;
-    background-size: cover;
-    background-position: center;
-    border: 2px solid var(--card-border);
-    background-color: var(--card-bg);
-    position: relative;
-  }
-  
-  .outra-noticia-1-single h3 {
-    padding: 10px;
-    color: var(--text-color);
-    width: 100%;
-    height: 40px;
-    background-color: var(--highlight-color);
-  }
-  
-  /* ==============================
+.noticias-1 {
+  margin-top: 30px;
+}
+
+.noticias-wraper-1 {
+  display: flex;
+  width: 100%;
+}
+
+.noticia-destaque {
+  width: 60%;
+  padding-top: 20%;
+  background-color: var(--card-bg);
+  border: 2px solid var(--card-border);
+  position: relative;
+}
+
+.noticia-destaque-single {
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.noticia-destaque-single h3 {
+  padding: 14px;
+  color: var(--text-color);
+  background: linear-gradient(var(--highlight-color), #222);
+  position: absolute;
+  bottom: 0;
+  /* cola no rodapé */
+  left: 0;
+  width: 100%;
+
+}
+
+.outras-noticias-1 {
+  display: flex;
+  width: 40%;
+  flex-wrap: wrap;
+}
+
+.outra-noticia-1-single {
+  width: 50%;
+  padding-top: 30%;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid var(--card-border);
+  background-color: var(--card-bg);
+  position: relative;
+  text-decoration: none;
+}
+
+.outra-noticia-1-single h3 {
+  padding: 10px;
+  color: var(--text-color);
+  width: 100%;
+  /* height: 40px; */
+  background: linear-gradient(var(--highlight-color), #222);
+  font-size: 13px;
+}
+
+/* ==============================
      Switch
   ============================== */
-  #switch {
-    position: relative;
-    width: 64px;
-    margin: 4px ;
-  }
-  
-  #switch button {
-    width: 32px;
-    height: 32px;
-    background: white var(--switch-bg-url) no-repeat center;
-    background-size: 60%;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    z-index: 1;
-    transform: translateY(-50%);
-    animation: slide-back 0.2s;
-  }
-  
-  .dark #switch button {
-    animation: slide-in 0.2s forwards;
-  }
-  
-  #switch span {
-    display: block;
-    width: 64px;
-    height: 24px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(4px);
-    border-radius: 9999px;
-  }
-  
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px;
+}
 
-  /* animações */
-  @keyframes slide-in {
-    from { left: 0; }
-    to { left: 50%; }
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  background-size: 60%;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+  animation: slide-back 0.2s;
+}
+
+.dark #switch button {
+  animation: slide-in 0.2s forwards;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+
+/* animações */
+@keyframes slide-in {
+  from {
+    left: 0;
   }
-  @keyframes slide-back {
-    from { left: 50%; }
-    to { left: 0; }
+
+  to {
+    left: 50%;
   }
-  
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
 /* ==============================
    RESPONSIVIDADE
 ============================== */
@@ -284,8 +320,31 @@
     margin-top: 20px;
   }
 
+  /* Hamburguer aparece */
+  .hamburguer {
+    display: flex;
+  }
+
+  /* Esconde links inicialmente */
   .menu-main .links {
-    gap: 20px;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+    gap: 15px;
+  }
+
+  /* Quando ativar */
+  .menu-main .links.show {
+    display: flex;
+  }
+
+  .menu-main .links a {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    background: linear-gradient(#9c38fa, var(--menu-color));
+    text-align: center;
   }
 
   .noticias-wraper-1 {
@@ -325,102 +384,7 @@
 
   .menu-main .links a {
     padding: 10px 20px;
-  }
-
-  .banner-ads {
-    height: 140px;
-  }
-
-  .noticia-destaque {
-    padding-top: 60%;
-  }
-
-  .outra-noticia-1-single {
-    width: 100%;
-    padding-top: 50%;
-  }
-}
-
-/* Mobile pequeno (até 480px) */
-@media (max-width: 480px) {
-  .logo img {
-    width: 150px;
-  }
-
-  .menu-main .links a {
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-
-  .banner-ads {
-    height: 120px;
-  }
-
-  .noticia-destaque {
-    padding-top: 70%;
-  }/* ==============================
-   RESPONSIVIDADE
-============================== */
-
-/* Tablet (até 1024px) */
-@media (max-width: 1024px) {
-  .wraper-header {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .logo img {
-    margin-left: 0;
-    width: 180px;
-  }
-
-  .banner-ads {
-    width: 100%;
-    height: 180px;
-    margin-top: 20px;
-  }
-
-  .menu-main .links {
-    gap: 20px;
-  }
-
-  .noticias-wraper-1 {
-    flex-direction: column;
-  }
-
-  .noticia-destaque {
-    width: 100%;
-    padding-top: 50%;
-  }
-
-  .outras-noticias-1 {
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .outra-noticia-1-single {
-    width: 50%;
-    padding-top: 40%;
-  }
-}
-
-/* Mobile (até 768px) */
-@media (max-width: 768px) {
-  .menu-main {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .menu-main .links {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
-
-  .menu-main .links a {
-    padding: 10px 20px;
+    font-size: 15px;
   }
 
   .banner-ads {
@@ -455,6 +419,4 @@
   .noticia-destaque {
     padding-top: 70%;
   }
-}
-
 }
