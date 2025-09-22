@@ -1,3 +1,4 @@
+
 /* reset básico */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -10,6 +11,7 @@
 }
 
 /* fundo geral + layout da página (IMPORTANTE: coluna para empurrar o footer) */
+
 body {
   min-height: 100vh;
   font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
@@ -18,6 +20,7 @@ body {
   display: flex;
   flex-direction: column; /* <<< aqui: mantém header/main/footer em coluna */
 }
+
 
 /* main ocupa o espaço disponível e centraliza o carrossel */
 main {
@@ -40,7 +43,6 @@ main {
   text-shadow: 0 4px 18px rgba(0,0,0,0.6);
 }
 
-
 /* container com perspectiva */
 .carossel-container {
   width: 820px;             /* largura total do layout */
@@ -61,6 +63,7 @@ main {
   position: absolute;
   left: 50%;
   top: 50%;
+
   transform-style: preserve-3d;
   transform-origin: center center;
   transition: transform 900ms cubic-bezier(.2,.9,.3,1);
@@ -119,6 +122,7 @@ main {
   margin-top: 0;
   margin-bottom: 8px
 }
+
 
 /* links sociais */
 .social-links {
@@ -224,6 +228,7 @@ main {
   color: #facc15; /* texto muda junto */
 }
 
+
 .menu-main .links a:hover::after {
   width: 100%;
 }
@@ -235,8 +240,10 @@ main {
     align-items: center;
     border-radius: 20px;
   }
+
   .menu-main .links {
     flex-direction: column;
     gap: 20px;
   }
 }
+

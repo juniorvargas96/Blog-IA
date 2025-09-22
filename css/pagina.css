@@ -5,17 +5,6 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to bottom, #f8f0ff, #ead9fa);
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  line-height: 1.9;
-  padding: 20px 0 0;
-}
-
 :root {
   --bg-color: #ead9fa;
   --text-color: #ffffff;
@@ -27,7 +16,6 @@ body {
   --switch-bg-url: url("../assert/sun-light.svg");
 }
 
-/* Tema Dark */
 .dark {
   --bg-color: #310042;
   --text-color: #ffffff;
@@ -39,40 +27,62 @@ body {
   --switch-bg-url: url("../assert/moon-stars-dark.svg");
 }
 
-
-.center p {
-  font-size: 1.8rem;
-  text-align: center;
-  margin: 40px 0 30px;
-  color: #6a1b9a;
-  letter-spacing: 1px;
+.dark .article-content p,
+.dark .article-content li {
+  color: var(--text-color);
 }
 
-.center {
-  max-width: 1700px;
-  margin: 0 auto;
-  padding: 0 2%;
-  flex-wrap: wrap;
-  text-align: center;
+body {
+  background-color: var(--bg-color);
 }
 
-.menu-main {
-  width: 100%;
-  background: linear-gradient(#d5a8ff, var(--menu-color));
-  padding: 8px;
+.header-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  border-radius: 4px;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
 }
 
-.menu-main .links {
+.header-content {
   display: flex;
-  gap: 40px;
-  /* espaço entre os links */
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 60px;
+  border-radius: 4px;
+  background: linear-gradient(#d5a8ff, var(--menu-color));
 }
 
-.menu-main .links a {
+/* ==============================
+   Menu Hambúrguer
+============================== */
+.hamburguer {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburguer span {
+  width: 28px;
+  height: 3px;
+  background: var(--text-color);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.header-content .links {
+  display: flex;
+  width: 100%;
+  padding-left: 150px;
+  padding-right: 150px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-content .links a {
   position: relative;
   padding: 8px 16px;
   color: var(--text-color);
@@ -81,7 +91,7 @@ body {
   z-index: 1;
 }
 
-.menu-main .links a::before {
+.header-content .links a::before {
   content: "";
   position: absolute;
   left: 50%;
@@ -90,260 +100,220 @@ body {
   width: 100%;
   height: 100%;
   background: linear-gradient(#9c38fa, var(--menu-color));
-  /* cor da pílula */
   border-radius: 20px;
   z-index: -1;
-  /* fica atrás do texto */
   transition: transform 0.3s ease;
 }
 
-.menu-main .links a:hover::before {
+.header-content .links a:hover::before {
   transform: translate(-50%, -50%) scaleX(1);
 }
 
-.menu-main a {
-  display: inline-block;
-  margin: 0 130px;
-  color: var(--text-color);
-  text-decoration: none;
-}
-
-.menu-main a:hover {
-  text-decoration: underline;
-}
-
-/* Conteúdo da notícia */
-.news-container {
-  max-width: 800px;
-  margin: 30px auto;
-  padding: 20px;
-}
-
-.news-title {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.news-subtitle {
-  font-size: 18px;
-  color: #444;
-  margin-bottom: 20px;
-}
-
-.author {
-  font-size: 14px;
-  color: gray;
-  margin-bottom: 20px;
-}
-
-.news-image {
+.container {
+  display: flex;
+  justify-content: center;
   width: 100%;
-  border-radius: 8px;
-  margin: 20px 0;
 }
 
-.news-content {
-  font-size: 16px;
-  margin-top: 15px;
+.article-content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.article-content h1 {
+  color: #8a2be2;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.article-content h2 {
+  color: #8a2be2;
+  font-size: 1.8rem;
+  margin: 2rem 0 1rem;
+}
+
+.article-content p {
+  color: #000;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
   text-align: justify;
 }
 
-/* ==============================
-   RESPONSIVIDADE
-============================== */
+.article-content ul {
+  list-style: none;
+  margin: 1.5rem 0;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 100%;
+}
+
+.article-content ul li {
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 1.2rem;
+  display: block;
+  white-space: normal;
+  word-wrap: break-word;
+  text-align: justify;
+}
+
+.article-content ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 8px;
+  height: 8px;
+  background-color: #8a2be2;
+  border-radius: 50%;
+}
+
+.article-content li {
+  color: #000;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.article-content strong {
+  color: #8a2be2;
+  font-weight: 600;
+}
+
+/* Switch */
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px;
+  display: flex;
+  align-items: center;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  background-size: 60%;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+  animation: slide-back 0.2s;
+}
+
+.dark #switch button {
+  animation: slide-in 0.2s forwards;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+/* Animações do switch */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+.article-content hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #8a2be2, transparent);
+  margin: 2rem 0;
+}
 
 /* Tablet (até 1024px) */
 @media (max-width: 1024px) {
-  .wraper-header {
+  .header-content {
+    display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  .logo img {
-    margin-left: 0;
-    width: 180px;
-  }
-
-  .banner-ads {
+    justify-content: center;
     width: 100%;
-    height: 180px;
-    margin-top: 20px;
+    height: auto;
+    gap: 10px;
+    padding: 12px 0;
   }
 
-  .menu-main .links {
-    gap: 20px;
+  .hamburguer {
+    align-self: center;
   }
 
-  .noticias-wraper-1 {
+  .hamburguer {
+    display: flex;
+  }
+
+  /* Esconde links inicialmente */
+  .header-content .links {
+    display: none;
     flex-direction: column;
-  }
-
-  .noticia-destaque {
     width: 100%;
-    padding-top: 50%;
+    margin-top: 10px;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
   }
 
-  .outras-noticias-1 {
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
+  .header-content .links.show {
+    display: flex;
   }
 
-  .outra-noticia-1-single {
-    width: 50%;
-    padding-top: 40%;
+  .header-content .links a {
+    width: 95%;
+    padding: 10px;
+    border-radius: 4px;
+    background: linear-gradient(#9c38fa, var(--menu-color));
+    text-align: center;
   }
 }
 
-/* Mobile (até 768px) */
+/* Responsividade */
 @media (max-width: 768px) {
-  .menu-main {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+  .container {
+    padding: 1rem;
   }
 
-  .menu-main .links {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
+  .article-content {
+    padding: 1.5rem;
   }
 
-  .menu-main .links a {
-    padding: 10px 20px;
+  .article-content h1 {
+    font-size: 2rem;
   }
 
-  .banner-ads {
-    height: 140px;
+  .article-content h2 {
+    font-size: 1.5rem;
   }
 
-  .noticia-destaque {
-    padding-top: 60%;
+  .article-content p {
+    font-size: 1rem;
   }
-
-  .outra-noticia-1-single {
-    width: 100%;
-    padding-top: 50%;
-  }
-}
-
-/* Mobile pequeno (até 480px) */
-@media (max-width: 480px) {
-  .logo img {
-    width: 150px;
-  }
-
-  .menu-main .links a {
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-
-  .banner-ads {
-    height: 120px;
-  }
-
-  .noticia-destaque {
-    padding-top: 70%;
-  }
-
-  /* ==============================
-   RESPONSIVIDADE
-============================== */
-
-  /* Tablet (até 1024px) */
-  @media (max-width: 1024px) {
-    .wraper-header {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .logo img {
-      margin-left: 0;
-      width: 180px;
-    }
-
-    .banner-ads {
-      width: 100%;
-      height: 180px;
-      margin-top: 20px;
-    }
-
-    .menu-main .links {
-      gap: 20px;
-    }
-
-    .noticias-wraper-1 {
-      flex-direction: column;
-    }
-
-    .noticia-destaque {
-      width: 100%;
-      padding-top: 50%;
-    }
-
-    .outras-noticias-1 {
-      width: 100%;
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-
-    .outra-noticia-1-single {
-      width: 50%;
-      padding-top: 40%;
-    }
-  }
-
-  /* Mobile (até 768px) */
-  @media (max-width: 768px) {
-    .menu-main {
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .menu-main .links {
-      flex-direction: column;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .menu-main .links a {
-      padding: 10px 20px;
-    }
-
-    .banner-ads {
-      height: 140px;
-    }
-
-    .noticia-destaque {
-      padding-top: 60%;
-    }
-
-    .outra-noticia-1-single {
-      width: 100%;
-      padding-top: 50%;
-    }
-  }
-
-  /* Mobile pequeno (até 480px) */
-  @media (max-width: 480px) {
-    .logo img {
-      width: 150px;
-    }
-
-    .menu-main .links a {
-      font-size: 14px;
-      padding: 8px 12px;
-    }
-
-    .banner-ads {
-      height: 120px;
-    }
-
-    .noticia-destaque {
-      padding-top: 70%;
-    }
-  }
-
 }
