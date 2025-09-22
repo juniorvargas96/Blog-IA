@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="light">
 
 <head>
   <meta charset="UTF-8">
@@ -13,49 +13,159 @@
 </head>
 
 <body>
+  <div class="header-container">
+    <header class="header-content">
+      <div class="hamburguer" id="hamburguer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
-
-  <header>
-    <div class="center">
-      <div class="menu-main">
-        <div class="hamburguer" id="hamburguer">
+      <div class="links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+        <div class="switch" id="switch" onclick="toggleMode()">
+          <button></button>
           <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
-        <div class="links" id="nav-links">
-          <a href="#">Home</a>
-          <a href="sobre.html">Sobre</a>
-          <a href="contato.html">Contato</a>
-          <div class="switch" id="switch" onclick="toggleMode()">
-            <button></button>
-            <span></span>
-          </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
+  </div>
   <!-- FIM HEADER -->
 
-  <!-- Conteúdo da notícia -->
-  <main class="news-container">
-    <h2 class="news-title">IA pode eliminar até 92 milhões de empregos, mas essas profissões devem sobreviver</h2>
+  <main class="container">
+    <article class="article-content">
+      <section>
+        <h1>Profissões impactadas pela IA: o que muda com a ascensão da inteligência artificial?</h1>
+        <p>
+          A ascensão da Inteligência Artificial (IA) tem gerado uma revolução em diversos setores,
+          transformando a
+          maneira como trabalhamos e, consequentemente, impactando o mercado de trabalho. Longe de ser apenas
+          um tema de
+          ficção científica, a IA já está presente em nosso dia a dia, automatizando tarefas, otimizando
+          processos e
+          abrindo portas para novas oportunidades.
+          No entanto, é inegável que essa transformação também levanta preocupações. A pergunta que paira no
+          ar é: quais
+          profissões serão as mais afetadas e como podemos nos preparar para essa nova realidade?
+        </p>
+      </section>
+      <hr>
 
-    <p class="news-subtitle">
-      Microsoft, Shopify e Amazon não fazem segredo: a IA possibilitará cortes profundos em seus quadros.
-      Políticos e até o papa alertam para os riscos à sociedade, enquanto economistas estão mais otimistas.
-    </p>
+      <section>
+        <h2>Profissões em risco: automação de tarefas repetitivas</h2>
+        <p>A IA se destaca na execução de tarefas que seguem regras e padrões definidos. Profissões que dependem
+          de
+          atividades repetitivas, manuais ou baseadas em dados são as mais suscetíveis à automação. Alguns
+          exemplos
+          incluem:</p>
+        <ul>
+          <li><strong>Atendentes de telemarketing:</strong> muitos atendimentos já são feitos por chatbots e
+            assistentes
+            virtuais, que conseguem resolver problemas comuns, agendar consultas e responder a perguntas
+            frequentes de
+            forma instantânea.</li>
+          <li><strong>Caixas de supermercado:</strong> a popularização dos caixas de autoatendimento e dos
+            sistemas de
+            pagamento por reconhecimento facial indica uma tendência de automação nessa área.
+          </li>
+          <li><strong>Contadores e analistas financeiros:</strong> softwares de IA podem processar grandes
+            volumes de
+            dados, realizar cálculos complexos e identificar padrões financeiros com mais agilidade e
+            precisão do que um
+            ser humano, automatizando tarefas como auditoria e conciliação bancária.</li>
+        </ul>
+      </section>
+      <hr>
 
-    <p class="author">Por Erika, Junior,Luiz, Mateus e Ricardo — 09/09/2025 às 20h00 | Atualizado há 10 dias</p>
+      <section>
+        <h2>Profissões transformadas: colaboração entre humanos e IA</h2>
+        <p>Em vez de substituir, a IA pode atuar como uma ferramenta de colaboração, potencializando as
+          capacidades
+          humanas. Nesses casos, a inteligência artificial automatiza as tarefas mais burocráticas, permitindo
+          que os
+          profissionais foquem em atividades que exigem criatividade, pensamento crítico, empatia e tomada de
+          decisões
+          complexas.</p>
+        <p>Alguns exemplos de profissões que estão passando por essa transformação são:</p>
+        <ul>
+          <li><strong>Médicos e radiologistas:</strong> a IA auxilia no diagnóstico, analisando exames de
+            imagem e
+            identificando anomalias com maior rapidez. Isso permite que os profissionais de saúde se
+            concentrem no
+            cuidado
+            e na interação com o paciente.</li>
+          <li><strong>Advogados:</strong> ferramentas de IA podem analisar documentos e contratos em busca de
+            cláusulas
+            relevantes, acelerando o processo de pesquisa jurídica e permitindo que os advogados dediquem
+            mais tempo à
+            argumentação e ao planejamento de estratégias.</li>
+          <li><strong>Jornalistas:</strong> a IA pode gerar rascunhos de notícias baseadas em dados, como
+            resultados de
+            jogos ou relatórios financeiros, liberando os jornalistas para se concentrarem em reportagens
+            investigativas
+            e
+            entrevistas aprofundadas.</li>
+          <li><strong>Professores:</strong> assistentes de IA podem automatizar a correção de provas de
+            múltipla escolha
+            ou o planejamento de aulas básicas, dando ao professor mais tempo para se dedicar ao aprendizado
+            individualizado de cada aluno.</li>
+        </ul>
+      </section>
+      <hr>
 
-    <img src="noticia.jpg" alt="Imagem da notícia" class="news-image">
+      <section>
+        <h2>Profissões em ascensão: a necessidade de especialistas em IA</h2>
+        <p>O crescimento da IA também cria uma demanda por novos especialistas. Esses profissionais serão os
+          responsáveis por desenvolver, implementar e gerenciar as tecnologias que moldarão o futuro. Algumas
+          das carreiras mais promissoras incluem:</p>
+        <ul>
+          <li><strong>Cientistas de dados:</strong> responsáveis por coletar e analisar grandes volumes de
+            dados,
+            extraindo informações valiosas que alimentam os modelos de IA.</li>
+          <li><strong>Engenheiros de machine learning:</strong> profissionais que constroem e treinam os
+            algoritmos que
+            permitem à IA aprender e tomar decisões.</li>
+          <li><strong>Especialistas em ética em IA:</strong> o desenvolvimento da IA levanta questões morais e
+            éticas
+            complexas. Esses profissionais garantem que a tecnologia seja usada de forma responsável e
+            justa.</li>
+        </ul>
+      </section>
+      <hr>
 
-    <p class="news-content">
-      A inteligência artificial tem gerado debates intensos sobre o futuro do trabalho.
-      Enquanto algumas carreiras correm risco de desaparecer, outras tendem a ganhar ainda mais relevância.
-      Profissões que exigem criatividade, pensamento crítico e interação humana são as que devem sobreviver.
-    </p>
+      <section>
+        <h2>O que fazer para se adaptar?</h2>
+        <p>Apesar das incertezas, a mensagem é clara: o futuro do trabalho exigirá adaptabilidade e aprendizado
+          contínuo. Profissionais de todas as áreas precisarão desenvolver novas habilidades para se manterem
+          relevantes, como:
+        </p>
+        <ul>
+          <li><strong>Habilidades interpessoais:</strong> a IA não é capaz de replicar a empatia, a
+            comunicação e a
+            criatividade humanas.</li>
+          <li><strong>Pensamento crítico e resolução de problemas complexos:</strong> a IA pode fornecer
+            dados, mas a
+            análise e a tomada de decisão final ainda serão responsabilidade humana.</li>
+          <li><strong>Alfabetização em IA:</strong> ter um entendimento básico de como a IA funciona e como
+            usar suas
+            ferramentas será fundamental em quase todas as profissões.</li>
+        </ul>
+      </section>
+      <hr>
+
+      <section>
+        <p>
+          Em vez de temer a tecnologia, é preciso encará-la como uma aliada. A IA não está aqui para nos
+          substituir, mas para nos libertar de tarefas repetitivas, permitindo que nos concentremos no que nos
+          torna mais
+          humanos: a criatividade, a inovação e o pensamento. A chave para o sucesso no mercado de trabalho do
+          futuro
+          será a capacidade de aprender e crescer ao lado da inteligência artificial.
+        </p>
+      </section>
+    </article>
   </main>
 
   <!-- FOOTER -->
@@ -95,14 +205,12 @@ s1371.981,38.998,1775.971,0s1193.985-39.278,1605.474,5.859s1293.475,48.368,1816.
       </ul>
       <ul class="links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="pagina.html">Notícias</a></li>
         <li><a href="sobre.html">Sobre</a></li>
         <li><a href="contato.html">Contato</a></li>
       </ul>
       <p class="legal">© 2025 JPnews - Todos os direitos reservados</p>
     </section>
   </footer>
-
 </body>
 <script src="js/script.js"></script>
 
