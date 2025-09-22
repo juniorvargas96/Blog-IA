@@ -7,7 +7,7 @@
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
-  
+
   /* ==============================
      Variáveis (Light padrão)
   ============================== */
@@ -21,7 +21,7 @@
     --card-border: #ead9fa;
     --switch-bg-url: url("../assert/sun-light.svg");
   }
-  
+
   /* Tema Dark */
   .dark {
     --bg-color: #310042;
@@ -33,16 +33,16 @@
     --card-border: #490166;
     --switch-bg-url: url("../assert/moon-stars-dark.svg");
   }
-  
+
   /* ==============================
      Estrutura global
   ============================== */
   body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    
+
   }
-  
+
   .center {
     display: flex;
     max-width: 1700px;
@@ -51,28 +51,28 @@
     flex-wrap: wrap;
   }
 
-  
+
   header h2 span {
     color: blueviolet;
   }
-  
+
   header h2 {
     font-size: 32px;
     color: var(--text-color);
   }
-  
+
   .logo img {
     width: 220px;
     margin-left: 40%;
   }
-  
+
   .wraper-header {
     padding: 40px 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
   }
-  
+
   .banner-ads {
     width: 70%;
     height: 220px;
@@ -82,7 +82,7 @@
     background-repeat: no-repeat;
     background-position: center;
   }
-  
+
   .banner-ads h2 {
     position: absolute;
     left: 10px;
@@ -91,7 +91,7 @@
     font-size: 15px;
     font-style: italic;
   }
-  
+
   .menu-main {
     width: 100%;
     background: linear-gradient(#d5a8ff, var(--menu-color)) ;
@@ -105,7 +105,7 @@
     display: flex;
     gap: 40px; /* espaço entre os links */
 }
-  
+
 .menu-main .links a {
   position: relative;
   padding: 8px 16px;
@@ -166,19 +166,19 @@
     cursor: pointer;
 }
 
-  
+
   /* ==============================
      Notícias
   ============================== */
   .noticias-1 {
     margin-top: 30px;
   }
-  
+
   .noticias-wraper-1 {
     display: flex;
     width: 100%;
   }
-  
+
   .noticia-destaque {
     width: 60%;
     padding-top: 20%;
@@ -186,7 +186,7 @@
     border: 2px solid var(--card-border);
     position: relative;
   }
-  
+
   .noticia-destaque-single {
     left: 0;
     top: 0;
@@ -196,7 +196,7 @@
     background-size: cover;
     background-position: center;
   }
-  
+
   .noticia-destaque-single h3 {
     padding: 14px;
     color: var(--text-color);
@@ -207,13 +207,13 @@
     width: 100%;
 
   }
-  
+
   .outras-noticias-1 {
     display: flex;
     width: 40%;
     flex-wrap: wrap;
   }
-  
+
   .outra-noticia-1-single {
     width: 50%;
     padding-top: 30%;
@@ -224,7 +224,7 @@
     position: relative;
     text-decoration: none;
   }
-  
+
   .outra-noticia-1-single h3 {
     padding: 10px;
     color: var(--text-color);
@@ -233,7 +233,7 @@
     background: linear-gradient(var(--highlight-color), #222) ;
     font-size: 13px;
   }
-  
+
   /* ==============================
      Switch
   ============================== */
@@ -242,7 +242,7 @@
     width: 64px;
     margin: 4px ;
   }
-  
+
   #switch button {
     width: 32px;
     height: 32px;
@@ -256,11 +256,11 @@
     transform: translateY(-50%);
     animation: slide-back 0.2s;
   }
-  
+
   .dark #switch button {
     animation: slide-in 0.2s forwards;
   }
-  
+
   #switch span {
     display: block;
     width: 64px;
@@ -270,7 +270,7 @@
     backdrop-filter: blur(4px);
     border-radius: 9999px;
   }
-  
+
 
   /* animações */
   @keyframes slide-in {
@@ -281,7 +281,7 @@
     from { left: 50%; }
     to { left: 0; }
   }
-  
+
 /* ==============================
    RESPONSIVIDADE
 ============================== */
@@ -316,6 +316,8 @@
     width: 100%;
     margin-top: 10px;
     gap: 15px;
+    align-items: center; /* centraliza os links */
+    justify-content: center;
   }
 
   /* Quando ativar */
@@ -357,6 +359,7 @@
   .menu-main {
     flex-direction: column;
     align-items: center;
+    justify-content: center; /* força centralização */
     gap: 10px;
   }
 
@@ -364,11 +367,15 @@
     flex-direction: column;
     gap: 10px;
     align-items: center;
+    justify-content: center; /* centraliza os links */
+    width: 100%;
   }
 
   .menu-main .links a {
     padding: 10px 20px;
     font-size: 15px;
+    text-align: center; /* garante centralização do texto */
+    margin: 0; /* remove margens que empurram */
   }
 
   .banner-ads {
