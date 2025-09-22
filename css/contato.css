@@ -154,7 +154,7 @@ main {
   position: absolute;
   width: 100%;
   left: 0;
-  bottom: 70px;
+  bottom: 20px;
   display: flex;
   justify-content: center;
   gap: 18px;
