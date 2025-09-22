@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;;
 }
 
 body {
@@ -40,77 +40,147 @@ body {
 }
 
 
-.center p {
+.center1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center1 p {
   font-size: 1.8rem;
   text-align: center;
   margin: 40px 0 30px;
   color: #6a1b9a;
   letter-spacing: 1px;
+  
 }
 
 .center {
+  display: flex;
   max-width: 1700px;
   margin: 0 auto;
   padding: 0 2%;
   flex-wrap: wrap;
-  text-align: center;
+}
+
+
+header h2 span {
+  color: blueviolet;
+}
+
+header h2 {
+  font-size: 32px;
+  color: var(--text-color);
 }
 
 .menu-main {
   width: 100%;
-  background: linear-gradient(#d5a8ff, var(--menu-color));
+  background: linear-gradient(#d5a8ff, var(--menu-color)) ;
   padding: 8px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   border-radius: 4px;
 }
-
 .menu-main .links {
   display: flex;
-  gap: 40px;
-  /* espaço entre os links */
+  gap: 40px; /* espaço entre os links */
 }
 
 .menu-main .links a {
-  position: relative;
-  padding: 8px 16px;
-  color: var(--text-color);
-  font-weight: bold;
-  text-decoration: none;
-  z-index: 1;
+position: relative;
+padding: 8px 16px;
+color: var(--text-color);
+font-weight: bold;
+text-decoration: none;
+z-index: 1;
 }
 
 .menu-main .links a::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) scaleX(0);
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(#9c38fa, var(--menu-color));
-  /* cor da pílula */
-  border-radius: 20px;
-  z-index: -1;
-  /* fica atrás do texto */
-  transition: transform 0.3s ease;
+content: "";
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%) scaleX(0);
+width: 100%;
+height: 100%;
+background: linear-gradient(#9c38fa, var(--menu-color)) ; /* cor da pílula */
+border-radius: 20px;
+z-index: -1; /* fica atrás do texto */
+transition: transform 0.3s ease;
 }
 
 .menu-main .links a:hover::before {
-  transform: translate(-50%, -50%) scaleX(1);
+transform: translate(-50%, -50%) scaleX(1);
 }
 
 .menu-main a {
-  display: inline-block;
-  margin: 0 130px;
-  color: var(--text-color);
-  text-decoration: none;
+display: inline-block;
+margin: 0 130px;
+color: var(--text-color);
+text-decoration: none;
 }
 
 .menu-main a:hover {
-  text-decoration: underline;
+text-decoration: underline;
 }
+
+/* Botão hamburguer (desktop não mostra) */
+.hamburguer {
+display: none;
+flex-direction: column;
+cursor: pointer;
+gap: 5px;
+}
+
+.hamburguer span {
+width: 28px;
+height: 3px;
+background: var(--text-color);
+border-radius: 2px;
+transition: 0.3s;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px ;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  background-size: 60%;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+  animation: slide-back 0.2s;
+}
+
+.dark #switch button {
+  animation: slide-in 0.2s forwards;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
 
 .sobre-container {
   max-width: 850px;
