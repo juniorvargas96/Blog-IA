@@ -5,6 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Equipe de Desenvolvedores</title>
+  <link rel="icon" href="assert/logo-jp.png" type="image/png">
 
   <!-- CSS local -->
   <link rel="stylesheet" href="./css/contato.css">
@@ -19,17 +20,29 @@
 <body>
 
   <header>
-    <div class="titulo">
+    <div class="center1">
       <p>Entre em Contato</p>
-      <nav class="menu-main">
-        <div class="links">
-          <a href="index.html">Home</a>
-          <a href="sobre.html">Sobre</a>
-          <a href="contato.html">Contato</a>
-          </div>
+    </div>
+    <div class="center">
+        <div class="menu-main">
+            <div class="hamburguer" id="hamburguer">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="contato.html">Contato</a>
+                <div class="switch" id="switch" onclick="toggleMode()">
+                    <button></button>
+                    <span></span>
+                </div>
+            </div>
         </div>
-      </nav>
-  </header>
+    </div>
+</header>
   <main>
     <div class="carossel-container">
       <h1>Equipe de Desenvolvedores</h1>
@@ -63,7 +76,7 @@
         <!-- Card 3 -->
         <div class="card" data-name="Mateus">
           <div class="photo" style="background-image:url('imag/Mateus.PNG');"></div>
-          <h3>Mateus Silva</h3>
+          <h3>Mateus Branco</h3>
           <p class="profissao">Fullstack Developer</p>
           <div class="social-links">
             <a href="https://www.linkedin.com/in/mateus-silva-branco-9b7339270/?originalSubdomain=br" target="_blank"
@@ -75,8 +88,8 @@
 
         <!-- Card 4 -->
         <div class="card" data-name="Ricardo">
-          <div class="photo" style="background-image:url('');"></div>
-          <h3>Ricardo</h3>
+          <div class="photo" style="background-image:url('imag/ricardo.png');"></div>
+          <h3>Ricardo de Paula</h3>
           <p class="profissao">Fullstack Developer</p>
           <div class="social-links">
             <a href="#" target="_blank" aria-label="LinkedIn Ricardo"><i class="fab fa-linkedin-in"></i></a>
@@ -86,8 +99,8 @@
 
         <!-- Card 5 -->
         <div class="card" data-name="Luiz">
-          <div class="photo" style="background-image:url('');"></div>
-          <h3>Luiz</h3>
+          <div class="photo" style="background-image:url('imag/luiz.png');"></div>
+          <h3>Luiz Mendes</h3>
           <p class="profissao">Fullstack Developer</p>
           <div class="social-links">
             <a href="#" target="_blank" aria-label="LinkedIn Luiz"><i class="fab fa-linkedin-in"></i></a>
@@ -141,7 +154,6 @@ s1371.981,38.998,1775.971,0s1193.985-39.278,1605.474,5.859s1293.475,48.368,1816.
       </ul>
       <ul class="links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="pagina.html">Notícias</a></li>
         <li><a href="sobre.html">Sobre</a></li>
         <li><a href="contato.html">Contato</a></li>
       </ul>
